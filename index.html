@@ -178,7 +178,25 @@
   .btn-primary:focus-visible { outline: 3px solid var(--berry-deep); outline-offset: 3px; }
   .btn-primary svg { transition: transform 0.18s ease; }
   .btn-primary:hover svg { transform: translateX(3px); }
-  .cta-note { font-size: 14px; color: var(--ink-soft); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--berry);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 15px 25px;
+    border-radius: 100px;
+    border: 1.5px solid var(--berry);
+    text-decoration: none;
+    transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+  }
+  .btn-secondary:hover { transform: translateY(-2px); background: var(--berry-tint); }
+  .btn-secondary:focus-visible { outline: 3px solid var(--berry-deep); outline-offset: 3px; }
+  .btn-secondary svg { transition: transform 0.18s ease; }
+  .btn-secondary:hover svg { transform: translateX(3px); }
+  .cta-note { font-size: 14px; color: var(--ink-soft); width: 100%; }
 
   /* Hero photo stack */
   .stack {
@@ -357,6 +375,9 @@
   .final-cta h2 { font-size: clamp(28px, 4vw, 40px); color: #FFF6F9; }
   .final-cta p { color: rgba(255, 246, 249, 0.82); max-width: 46ch; margin: 16px auto 30px; font-size: 17px; }
   .final-cta .btn-primary { background: #FFF6F9; color: var(--berry-deep); }
+  .final-cta .cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .final-cta .btn-secondary { color: #FFF6F9; border-color: rgba(255, 246, 249, 0.7); }
+  .final-cta .btn-secondary:hover { background: rgba(255, 246, 249, 0.14); }
 
   footer {
     padding: 40px 24px 56px;
@@ -375,7 +396,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     [data-reveal] { opacity: 1; transform: none; transition: none; }
-    .btn-primary, .btn-primary svg { transition: none; }
+    .btn-primary, .btn-primary svg, .btn-secondary, .btn-secondary svg { transition: none; }
   }
 </style>
 </head>
@@ -391,7 +412,11 @@
           Начать в Telegram
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <span class="cta-note">@BodyTonBot · старт индивидуально или потоком</span>
+        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
+          Открыть веб-версию
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="cta-note">@BodyTonBot в Telegram или приложение в браузере — как удобнее</span>
       </div>
     </div>
     <div class="stack" aria-hidden="true">
@@ -512,11 +537,17 @@
   <div class="wrap">
     <div class="final-cta">
       <h2>Готовы узнать, что мешает вашему весу?</h2>
-      <p>Напишите боту — он проведёт через короткую анкету и расскажет, что дальше.</p>
-      <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
-        Открыть @BodyTonBot
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <p>Начните в Telegram или откройте веб-версию в браузере — программа и рецепты одни и те же.</p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
+          Открыть @BodyTonBot
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
+          Открыть веб-версию
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
