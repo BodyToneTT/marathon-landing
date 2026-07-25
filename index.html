@@ -349,6 +349,8 @@
   .plan h3 { font-size: 24px; }
   .plan .price { font-family: 'Yeseva One', Georgia, serif; font-size: 32px; color: var(--berry); }
   .plan .price small { font-family: 'Golos Text', sans-serif; font-size: 14px; color: var(--ink-soft); font-weight: 500; }
+  .plan .per-day { margin-top: -8px; font-size: 15px; color: var(--ink-soft); }
+  .plan .per-day b { color: var(--berry); font-weight: 700; }
   .plan ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
   .plan li { display: flex; gap: 10px; color: var(--ink-soft); font-size: 15px; }
   .plan li::before { content: "✓"; color: var(--sage); font-weight: 700; flex-shrink: 0; }
@@ -514,19 +516,11 @@
     <span class="eyebrow">Форматы участия</span>
     <h2 id="plans-h" style="font-size: clamp(28px, 3.6vw, 38px); margin-top: 14px;">Выбирайте, как вам удобнее</h2>
     <div class="plans-grid">
-      <div class="plan">
-        <h3>Индивидуально</h3>
-        <div class="price">По запросу <small>у куратора</small></div>
-        <ul>
-          <li>Старт в любой день — как только готовы</li>
-          <li>Свой темп прохождения программы</li>
-          <li>Личный чат-бот: план, рецепты, чек-ин</li>
-        </ul>
-      </div>
       <div class="plan is-featured">
         <span class="plan-tag">Популярный выбор</span>
         <h3>Групповой поток</h3>
         <div class="price">3 500 ₽ <small>группа до 10 человек</small></div>
+        <div class="per-day">Это всего <b>100 ₽ за день</b> — за все 35 дней марафона</div>
         <ul>
           <li>Общий старт — вместе веселее и легче не бросить</li>
           <li>Чат-болталка потока для поддержки и рецептов</li>
@@ -535,6 +529,15 @@
         <div class="dates-row">
           <span class="date-chip">Новый поток стартует каждый понедельник</span>
         </div>
+      </div>
+      <div class="plan">
+        <h3>Индивидуально</h3>
+        <div class="price">По запросу <small>у куратора</small></div>
+        <ul>
+          <li>Старт в любой день — как только готовы</li>
+          <li>Свой темп прохождения программы</li>
+          <li>Личный чат-бот: план, рецепты, чек-ин</li>
+        </ul>
       </div>
     </div>
   </div>
