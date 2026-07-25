@@ -197,6 +197,7 @@
   .btn-secondary svg { transition: transform 0.18s ease; }
   .btn-secondary:hover svg { transform: translateX(3px); }
   .cta-note { font-size: 14px; color: var(--ink-soft); width: 100%; }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
   /* Hero photo stack */
   .stack {
@@ -486,11 +487,17 @@
     <div class="secret-teaser">
       <div class="secret-mark">🔒</div>
       <h2 id="secret-h">У марафона есть один секретный ингредиент</h2>
-      <p>Он есть почти в каждом дне программы и работает на результат по-своему — но раскрываем его только тем, кто уже зарегистрировался в марафоне.</p>
-      <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
-        Узнать секрет
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <p>Он есть почти в каждом дне программы и работает на результат по-своему — но раскрываем его только тем, кто уже зарегистрировался в марафоне. Выбирайте, как удобнее начать:</p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
+          Узнать в Telegram
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
+          Узнать в веб-версии
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
