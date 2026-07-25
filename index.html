@@ -270,6 +270,29 @@
   blockquote::after { content: "»"; color: var(--berry); }
   .quote-attr { margin-top: 22px; color: var(--ink-soft); font-size: 15px; }
 
+  /* ---------- SECRET INGREDIENT ---------- */
+  .secret-teaser {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--berry-tint);
+    border: 1.5px dashed var(--berry);
+    border-radius: 24px;
+    padding: 48px 36px;
+  }
+  .secret-mark {
+    width: 52px; height: 52px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--ground-raised);
+    color: var(--berry-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+  }
+  .secret-teaser h2 { font-size: clamp(24px, 3.2vw, 32px); margin: 0 0 10px; }
+  .secret-teaser p { color: var(--ink-soft); font-size: 16px; margin: 0 0 26px; }
+
   /* ---------- PLANS ---------- */
   .plans-grid {
     display: grid;
@@ -429,6 +452,20 @@
         <h3>Бот находит закономерность</h3>
         <p>Если после продукта несколько раз подряд нет отвеса — бот подсказывает: возможно, дело в нём.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="secret-h" data-reveal>
+  <div class="wrap">
+    <div class="secret-teaser">
+      <div class="secret-mark">🔒</div>
+      <h2 id="secret-h">У марафона есть один секретный ингредиент</h2>
+      <p>Он есть почти в каждом дне программы и работает на результат по-своему — но раскрываем его только тем, кто уже зарегистрировался в марафоне.</p>
+      <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
+        Узнать секрет
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
