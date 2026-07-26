@@ -197,6 +197,20 @@
   .btn-secondary svg { transition: transform 0.18s ease; }
   .btn-secondary:hover svg { transform: translateX(3px); }
   .cta-note { font-size: 14px; color: var(--ink-soft); width: 100%; }
+  .messenger-links { display: inline-flex; align-items: center; gap: 10px; }
+  .messenger-links span { font-size: 14px; color: var(--ink-soft); }
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.18s ease;
+  }
+  .icon-btn:hover { transform: translateY(-2px); }
+  .icon-btn:focus-visible { outline: 3px solid var(--berry-deep); outline-offset: 2px; border-radius: 10px; }
+  .icon-btn svg { width: 100%; height: 100%; display: block; }
+  .final-cta .messenger-links span { color: rgba(255, 246, 249, 0.82); }
   .cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
   /* Hero photo stack */
@@ -413,15 +427,34 @@
       <h1>35 дней, чтобы понять своё тело — и наконец в него&nbsp;<em>влюбиться</em></h1>
       <p class="lede">Никакого подсчёта калорий и голода. Едите вкусно и разнообразно по готовым рецептам, а мы вместе находим продукты, из-за которых стоит именно ваш вес.</p>
       <div class="cta-row">
-        <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
-          Начать в Telegram
+        <a class="btn-primary" href="http://localhost:5000" target="_blank" rel="noopener">
+          Начать в веб-версии
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
-          Открыть веб-версию
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <span class="cta-note">В мессенджере или в браузере — начинайте, где удобно</span>
+        <div class="messenger-links">
+          <span>или в мессенджере:</span>
+          <a class="icon-btn" href="https://max.ru/se13732066_bot" target="_blank" rel="noopener" aria-label="Открыть бота в MAX">
+            <svg viewBox="0 0 1000 1000" aria-hidden="true">
+              <defs>
+                <linearGradient id="maxA1"><stop offset="0" stop-color="#4cf"/><stop offset=".662" stop-color="#53e"/><stop offset="1" stop-color="#93d"/></linearGradient>
+                <linearGradient id="maxB1"><stop offset="0" stop-color="#00f"/><stop offset="1" stop-opacity="0"/></linearGradient>
+                <linearGradient id="maxC1" x1="117.847" x2="1000" y1="760.536" y2="500" gradientUnits="userSpaceOnUse" href="#maxA1"/>
+                <radialGradient id="maxD1" cx="-87.392" cy="1166.116" r="500" fx="-87.392" fy="1166.116" gradientTransform="rotate(51.356 1551.478 559.3)scale(2.42703433 1)" gradientUnits="userSpaceOnUse" href="#maxB1"/>
+              </defs>
+              <rect width="1000" height="1000" fill="url(#maxC1)" ry="249.681"/>
+              <rect width="1000" height="1000" fill="url(#maxD1)" ry="249.681"/>
+              <path fill="#fff" fill-rule="evenodd" d="M508.211 878.328c-75.007 0-109.864-10.95-170.453-54.75-38.325 49.275-159.686 87.783-164.979 21.9 0-49.456-10.95-91.248-23.36-136.873-14.782-56.21-31.572-118.807-31.572-209.508 0-216.626 177.754-379.597 388.357-379.597 210.785 0 375.947 171.001 375.947 381.604.707 207.346-166.595 376.118-373.94 377.224m3.103-571.585c-102.564-5.292-182.499 65.7-200.201 177.024-14.6 92.162 11.315 204.398 33.397 210.238 10.585 2.555 37.23-18.98 53.837-35.587a189.8 189.8 0 0 0 92.71 33.032c106.273 5.112 197.08-75.794 204.215-181.95 4.154-106.382-77.67-196.486-183.958-202.574Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a class="icon-btn" href="https://t.me/BodyTonBot" target="_blank" rel="noopener" aria-label="Открыть бота в Telegram">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="50" fill="url(#tgGrad1)"/>
+              <path fill="#fff" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392    s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431    c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691    c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659    C97.307,8.804,88.723,12.142,88.723,12.142z"/>
+              <defs><linearGradient id="tgGrad1" x1="0" y1="0" x2="100" y2="100"><stop stop-color="#2AABEE"/><stop offset="1" stop-color="#229ED9"/></linearGradient></defs>
+            </svg>
+          </a>
+        </div>
+        <span class="cta-note">Мессенджер или браузер — начинайте, где удобно</span>
       </div>
     </div>
     <div class="stack" aria-hidden="true">
@@ -498,14 +531,33 @@
       <h2 id="secret-h">У марафона есть один секретный ингредиент</h2>
       <p>Он есть почти в каждом дне программы и работает на результат по-своему — но раскрываем его только тем, кто уже зарегистрировался в марафоне. Выбирайте, как удобнее начать:</p>
       <div class="cta-buttons">
-        <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
-          Узнать в Telegram
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
+        <a class="btn-primary" href="http://localhost:5000" target="_blank" rel="noopener">
           Узнать в веб-версии
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+        <div class="messenger-links">
+          <span>или в мессенджере:</span>
+          <a class="icon-btn" href="https://max.ru/se13732066_bot" target="_blank" rel="noopener" aria-label="Открыть бота в MAX">
+            <svg viewBox="0 0 1000 1000" aria-hidden="true">
+              <defs>
+                <linearGradient id="maxA2"><stop offset="0" stop-color="#4cf"/><stop offset=".662" stop-color="#53e"/><stop offset="1" stop-color="#93d"/></linearGradient>
+                <linearGradient id="maxB2"><stop offset="0" stop-color="#00f"/><stop offset="1" stop-opacity="0"/></linearGradient>
+                <linearGradient id="maxC2" x1="117.847" x2="1000" y1="760.536" y2="500" gradientUnits="userSpaceOnUse" href="#maxA2"/>
+                <radialGradient id="maxD2" cx="-87.392" cy="1166.116" r="500" fx="-87.392" fy="1166.116" gradientTransform="rotate(51.356 1551.478 559.3)scale(2.42703433 1)" gradientUnits="userSpaceOnUse" href="#maxB2"/>
+              </defs>
+              <rect width="1000" height="1000" fill="url(#maxC2)" ry="249.681"/>
+              <rect width="1000" height="1000" fill="url(#maxD2)" ry="249.681"/>
+              <path fill="#fff" fill-rule="evenodd" d="M508.211 878.328c-75.007 0-109.864-10.95-170.453-54.75-38.325 49.275-159.686 87.783-164.979 21.9 0-49.456-10.95-91.248-23.36-136.873-14.782-56.21-31.572-118.807-31.572-209.508 0-216.626 177.754-379.597 388.357-379.597 210.785 0 375.947 171.001 375.947 381.604.707 207.346-166.595 376.118-373.94 377.224m3.103-571.585c-102.564-5.292-182.499 65.7-200.201 177.024-14.6 92.162 11.315 204.398 33.397 210.238 10.585 2.555 37.23-18.98 53.837-35.587a189.8 189.8 0 0 0 92.71 33.032c106.273 5.112 197.08-75.794 204.215-181.95 4.154-106.382-77.67-196.486-183.958-202.574Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a class="icon-btn" href="https://t.me/BodyTonBot" target="_blank" rel="noopener" aria-label="Открыть бота в Telegram">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="50" fill="url(#tgGrad2)"/>
+              <path fill="#fff" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392    s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431    c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691    c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659    C97.307,8.804,88.723,12.142,88.723,12.142z"/>
+              <defs><linearGradient id="tgGrad2" x1="0" y1="0" x2="100" y2="100"><stop stop-color="#2AABEE"/><stop offset="1" stop-color="#229ED9"/></linearGradient></defs>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -556,14 +608,33 @@
       <h2>Готовы узнать, что мешает вашему весу?</h2>
       <p>Начните в мессенджере или откройте веб-версию в браузере — программа и рецепты одни и те же.</p>
       <div class="cta-buttons">
-        <a class="btn-primary" href="https://t.me/BodyTonBot" target="_blank" rel="noopener">
-          Открыть в Telegram
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn-secondary" href="http://localhost:5000" target="_blank" rel="noopener">
+        <a class="btn-primary" href="http://localhost:5000" target="_blank" rel="noopener">
           Открыть веб-версию
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+        <div class="messenger-links">
+          <span>или в мессенджере:</span>
+          <a class="icon-btn" href="https://max.ru/se13732066_bot" target="_blank" rel="noopener" aria-label="Открыть бота в MAX">
+            <svg viewBox="0 0 1000 1000" aria-hidden="true">
+              <defs>
+                <linearGradient id="maxA3"><stop offset="0" stop-color="#4cf"/><stop offset=".662" stop-color="#53e"/><stop offset="1" stop-color="#93d"/></linearGradient>
+                <linearGradient id="maxB3"><stop offset="0" stop-color="#00f"/><stop offset="1" stop-opacity="0"/></linearGradient>
+                <linearGradient id="maxC3" x1="117.847" x2="1000" y1="760.536" y2="500" gradientUnits="userSpaceOnUse" href="#maxA3"/>
+                <radialGradient id="maxD3" cx="-87.392" cy="1166.116" r="500" fx="-87.392" fy="1166.116" gradientTransform="rotate(51.356 1551.478 559.3)scale(2.42703433 1)" gradientUnits="userSpaceOnUse" href="#maxB3"/>
+              </defs>
+              <rect width="1000" height="1000" fill="url(#maxC3)" ry="249.681"/>
+              <rect width="1000" height="1000" fill="url(#maxD3)" ry="249.681"/>
+              <path fill="#fff" fill-rule="evenodd" d="M508.211 878.328c-75.007 0-109.864-10.95-170.453-54.75-38.325 49.275-159.686 87.783-164.979 21.9 0-49.456-10.95-91.248-23.36-136.873-14.782-56.21-31.572-118.807-31.572-209.508 0-216.626 177.754-379.597 388.357-379.597 210.785 0 375.947 171.001 375.947 381.604.707 207.346-166.595 376.118-373.94 377.224m3.103-571.585c-102.564-5.292-182.499 65.7-200.201 177.024-14.6 92.162 11.315 204.398 33.397 210.238 10.585 2.555 37.23-18.98 53.837-35.587a189.8 189.8 0 0 0 92.71 33.032c106.273 5.112 197.08-75.794 204.215-181.95 4.154-106.382-77.67-196.486-183.958-202.574Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a class="icon-btn" href="https://t.me/BodyTonBot" target="_blank" rel="noopener" aria-label="Открыть бота в Telegram">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="50" fill="url(#tgGrad3)"/>
+              <path fill="#fff" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392    s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431    c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691    c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659    C97.307,8.804,88.723,12.142,88.723,12.142z"/>
+              <defs><linearGradient id="tgGrad3" x1="0" y1="0" x2="100" y2="100"><stop stop-color="#2AABEE"/><stop offset="1" stop-color="#229ED9"/></linearGradient></defs>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
